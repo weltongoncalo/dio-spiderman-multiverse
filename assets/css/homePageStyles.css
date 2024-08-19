@@ -1,0 +1,160 @@
+/* Importa outras folhas de estilo */
+@import url("/assets/css/reset.css");
+@import url("/assets/css/global.css");
+
+/* GENERIC STYLES */
+body {
+  background-color: var(--primary-color);
+}
+
+body::before {
+  content: "";
+  background-image: url(/assets/images/spider-man-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.2;
+  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* MENU STYLES */
+.menu {
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.menu__item {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 1.25rem;
+}
+
+.menu__icon {
+  width: 2.5rem;
+  margin: 0 1.25rem;
+  vertical-align: middle;
+}
+
+/* CARD STYLES */
+.card {
+  border: 0.5rem solid white;
+  width: calc(100% / 3 - 8%);
+  height: 70vh;
+  position: relative;
+  transition: filter .5s ease-in-out;
+}
+
+.card__background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+
+.card__tittle {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: bottom 1s ease-in-out;  
+}
+
+/* CONTROLLER STYLES */
+.controller {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.controller__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+  transform: transform 0.3s ease-in-out;
+}
+
+.controller__button:nth-child(2) {
+  margin: 0 5rem;
+}
+
+.controller__button:hover {
+  transform: scale(1.3);
+}
+
+.controller__line {
+  background-color: white;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+}
+
+/* CARD HOVERED STYLES */
+.card--hovered .card__background {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.card--hovered .card__image {
+  transform: scale(1.4);
+  filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5));
+}
+
+.card--hovered .card__tittle{
+  bottom: 50%;
+}
+
+body#spider-man-01--hovered::before {
+  background-image: url('/assets/images/pic-sm-bg-01.jpg');
+}
+
+body#spider-man-02--hovered::before {
+  background-image: url('/assets/images/pic-sm-bg-02.jpg');
+}
+
+body#spider-man-03--hovered::before {
+  background-image: url('/assets/images/pic-sm-bg-03.jpg');
+}
+
+body[id^='spider-man-']::before {
+  opacity: 1;
+}
+
+body[id^='spider-man-'] .card:not(.card--hovered){
+  filter: grayscale(100%);
+}
