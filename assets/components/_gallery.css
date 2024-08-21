@@ -1,0 +1,62 @@
+.gallery{
+  padding: 20px;
+  padding-left: 0;
+}
+
+.gallery ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.gallery ul li{
+  margin-left: 25px;
+}
+
+.gallery ul li:first-child{
+  margin-left: 0;
+}
+
+.gallery ul li a img{
+  border: 6px solid white;
+  border-radius: 15px;
+}
+
+.spiderman1-1{
+  background-image: url("../images/spiderman-tobey/movie-01/background.png");
+  background-size: cover;
+}
+
+.spiderman1-2{
+  background-image: url("../images/spiderman-tobey/movie-02/background.png");
+  background-size: cover;
+}
+
+.spiderman1-3{
+  background-image: url("../images/spiderman-tobey/movie-03/background.png");
+  background-size: cover;
+}
+
+.spiderman2-1{
+  background-image: url("../images/spiderman-tom/movie-01/background.png");
+  background-size: cover;
+}
+
+.spiderman2-2{
+  background-image: url("../images/spiderman-tom/movie-02/background.png");
+  background-size: cover;
+}
+
+.spiderman2-3{
+  background-image: url("../images/spiderman-tom/movie-03/background.png");
+  background-size: cover;
+}
+
+.spiderman3-1{
+  background-image: url("../images/spiderman-andrew/movie-01/background.png");
+  background-size: cover;
+}
+
+.spiderman3-2{
+  background-image: url("../images/spiderman-andrew/movie-02/background.png");
+  background-size: cover;
+}

@@ -1,0 +1,59 @@
+/* NAVIGATOR STYLES */
+.navigator {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.navigator::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  z-index: 0;
+}
+
+.navigator .navigator__item {
+  margin: 60px 0;
+}
+
+
+.navigator .navigator__item:first-child {
+  margin-top: 0;
+}
+
+.navigator .navigator__item:last-child {
+  margin-bottom: 0;
+}
+
+.navigator .navigator__item a {
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigator .navigator__item a:hover,
+.navigator .navigator__item a:active {
+  color: var(--primary-color);
+  background-color: white;
+}
+
+.navigator .navigator__icon{
+  position: absolute;
+  top: -20px;
+}
+
+.navigator ul {
+  z-index: 1;
+}
